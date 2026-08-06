@@ -82,7 +82,7 @@
             letter-spacing: 0.5px;
         }
 
-        /* ===== MAIN CONTENT - Add padding to account for fixed header ===== */
+        /* ===== MAIN CONTENT ===== */
         .main-content {
             padding-top: 100px;
             padding-left: 20px;
@@ -211,7 +211,8 @@
             display: flex;
             flex-wrap: wrap;
             gap: 18px;
-            background: linear-gradient(135deg, #fafbff 0%, #f8f9fc 100%);
+            background: white;
+            align-items: center;
         }
 
         .card-header .avatar {
@@ -275,7 +276,7 @@
         /* ===== CARD ROWS ===== */
         .row {
             display: flex;
-            padding: 16px 25px;
+            padding: 14px 25px;
             border-top: 1px solid #f1f3f5;
             gap: 10px;
             flex-wrap: wrap;
@@ -284,8 +285,10 @@
         .row .label {
             color: #6b7280;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 13px;
             min-width: 130px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
         }
 
         .row .value {
@@ -379,7 +382,7 @@
             line-height: 1.6;
         }
 
-        /* ===== RESPONSIVE - Tablet & Mobile ===== */
+        /* ===== RESPONSIVE - Tablet ===== */
         @media (max-width: 768px) {
             .fixed-header {
                 padding: 8px 12px 6px 12px;
@@ -433,7 +436,7 @@
 
             .row .label {
                 min-width: auto;
-                font-size: 12px;
+                font-size: 11px;
             }
 
             .row .value {
@@ -465,6 +468,7 @@
             }
         }
 
+        /* ===== RESPONSIVE - Mobile (image on LEFT, name on RIGHT) ===== */
         @media (max-width: 480px) {
             .fixed-header {
                 padding: 6px 8px 4px 8px;
@@ -506,7 +510,7 @@
             }
 
             .title {
-                font-size: 24px;
+                font-size: 22px;
             }
 
             .subtitle {
@@ -536,40 +540,45 @@
                 font-size: 12px;
             }
 
+            /* ===== FIX: Image on LEFT, Name on RIGHT on mobile ===== */
             .card-header {
                 padding: 14px 16px;
-                flex-direction: column;
+                display: flex;
+                flex-direction: row;
                 align-items: center;
-                text-align: center;
-                gap: 12px;
+                gap: 14px;
+                text-align: left;
             }
 
             .card-header .avatar {
                 width: 70px;
                 height: 70px;
+                flex-shrink: 0;
             }
 
             .card-header .info {
                 min-width: auto;
-                width: 100%;
+                width: auto;
+                flex: 1;
             }
 
             .name {
-                font-size: 20px;
+                font-size: 18px;
+                text-align: left;
             }
 
             .tags {
-                justify-content: center;
+                justify-content: flex-start;
             }
 
             .tag {
-                font-size: 11px;
-                padding: 4px 12px;
+                font-size: 10px;
+                padding: 3px 10px;
             }
 
             .approved {
-                font-size: 11px;
-                padding: 4px 12px;
+                font-size: 10px;
+                padding: 4px 10px;
             }
 
             .row {
@@ -580,6 +589,7 @@
 
             .row .label {
                 font-size: 10px;
+                min-width: auto;
             }
 
             .row .value {
@@ -653,6 +663,15 @@
             .subtitle {
                 flex-direction: column;
                 align-items: flex-start;
+            }
+
+            .card-header .avatar {
+                width: 60px;
+                height: 60px;
+            }
+
+            .name {
+                font-size: 16px;
             }
         }
 
@@ -732,6 +751,7 @@
             <div class="header-meta">
                 <span class="heading">DOCUMENT AUTHENTICATION</span>
                 <span class="verification-badge">
+                    <i class="fas fa-check-circle"></i> Verified
                 </span>
             </div>
 
@@ -742,7 +762,7 @@
                     <i class="fas fa-medal"></i> NATIONAL COMPETITION CARD
                 </span>
                 <span style="font-size:13px; color:#6b7280;">
-                    
+                    <i class="far fa-clock"></i> Issued: 02 Aug 2026
                 </span>
             </div>
 
@@ -758,7 +778,7 @@
             <!-- ===== MAIN CARD ===== -->
             <div class="card">
 
-                <!-- Card Header -->
+                <!-- Card Header - Image on LEFT, Name on RIGHT -->
                 <div class="card-header">
                     <div class="avatar">
                         <img src="20260503_1716411.png" alt="DUSE TREVOR">
@@ -766,8 +786,8 @@
                     <div class="info">
                         <div class="name">DUSE TREVOR</div>
                         <div class="tags">
-                            <span class="tag"><i class="fas fa-venus-mars"></i> Male</span>
-                            <span class="tag">#</i> UAHEB/061/034/24</span>
+                            <span class="tag">Male</span>
+                            <span class="tag">UAHEB/061/034/24</span>
                         </div>
                         <span class="approved">
                             <i class="fas fa-check-circle"></i> National Approved
@@ -777,22 +797,22 @@
 
                 <!-- Card Rows -->
                 <div class="row">
-                    <span class="label"></i> Institution</span>
+                    <span class="label">Institution</span>
                     <span class="value">Medical Laboratory Training School Jinja</span>
                 </div>
 
                 <div class="row">
-                    <span class="label"></i> Disciplines</span>
+                    <span class="label">Disciplines</span>
                     <span class="value">Handball – Men, Volleyball – Men</span>
                 </div>
 
                 <div class="row">
-                    <span class="label"></i> Tournament</span>
+                    <span class="label">Tournament</span>
                     <span class="value">THE 24th Edn of the national games and sports for health training institutions 2026</span>
                 </div>
 
                 <div class="row">
-                    <span class="label"></i> Competition Level</span>
+                    <span class="label">Competition Level</span>
                     <span class="value">
                         <span class="purple-btn" style="margin:0; padding:4px 16px; font-size:12px;">
                             <i class="fas fa-star"></i> National
