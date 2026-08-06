@@ -151,17 +151,23 @@
             margin-bottom: 25px;
         }
 
-        .purple-btn {
+        /* ===== PURPLE STRIP DESIGN ===== */
+        .purple-strip {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: #f1e8ff;
-            color: #6d28d9;
-            padding: 8px 20px;
+            background: linear-gradient(135deg, #7c3aed, #6d28d9);
+            color: white;
+            padding: 8px 22px;
             border-radius: 30px;
             font-size: 13px;
             font-weight: 600;
-            border: 1px solid #e0d4f5;
+            border: none;
+            box-shadow: 0 2px 8px rgba(109, 40, 217, 0.3);
+        }
+
+        .purple-strip i {
+            color: white;
         }
 
         /* ===== VERIFICATION STATUS ===== */
@@ -186,6 +192,7 @@
             color: #15803d;
             font-size: 16px;
             margin-bottom: 2px;
+            font-weight: 700;
         }
 
         .verify-box p {
@@ -206,7 +213,7 @@
             box-shadow: 0 15px 40px rgba(0,0,0,0.12);
         }
 
-        /* ===== PARTICIPANT SECTION WITH BORDER ===== */
+        /* ===== PARTICIPANT SECTION ===== */
         .participant-section {
             padding: 20px 25px 16px 25px;
             border-bottom: 1px solid #f1f3f5;
@@ -288,7 +295,7 @@
             margin-top: 2px;
         }
 
-        /* ===== INFO BOXES WITH BORDERS ===== */
+        /* ===== INFO BOXES ===== */
         .info-box {
             padding: 14px 25px;
             border-bottom: 1px solid #f1f3f5;
@@ -299,7 +306,7 @@
 
         .info-box .label {
             color: #6b7280;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 13px;
             min-width: 140px;
             text-transform: uppercase;
@@ -310,17 +317,18 @@
             flex: 1;
             color: #111827;
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 700;
         }
 
         .info-box .value .national-tag {
             display: inline-block;
-            background: #f1e8ff;
-            color: #6d28d9;
-            padding: 2px 16px;
+            background: linear-gradient(135deg, #7c3aed, #6d28d9);
+            color: white;
+            padding: 3px 18px;
             border-radius: 30px;
             font-size: 12px;
             font-weight: 600;
+            box-shadow: 0 2px 8px rgba(109, 40, 217, 0.25);
         }
 
         /* ===== CARD DETAILS SECTION ===== */
@@ -341,23 +349,23 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 0;
-            border: 1px solid #f1f3f5;
+            border: 2px solid #e5e7eb;
             border-radius: 12px;
             overflow: hidden;
         }
 
         .card-detail-item {
             padding: 14px 20px;
-            border-bottom: 1px solid #f1f3f5;
+            border-bottom: 1px solid #e5e7eb;
         }
 
         .card-detail-item:nth-child(1),
         .card-detail-item:nth-child(2) {
-            border-bottom: 1px solid #f1f3f5;
+            border-bottom: 1px solid #e5e7eb;
         }
 
         .card-detail-item:nth-child(odd) {
-            border-right: 1px solid #f1f3f5;
+            border-right: 1px solid #e5e7eb;
         }
 
         .card-detail-item:last-child {
@@ -377,7 +385,7 @@
         .card-detail-item h3 {
             font-size: 15px;
             color: #111827;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .card-detail-item .green {
@@ -531,7 +539,7 @@
                 margin-bottom: 18px;
             }
 
-            .purple-btn {
+            .purple-strip {
                 font-size: 11px;
                 padding: 6px 14px;
             }
@@ -606,6 +614,7 @@
 
             .card-details-grid {
                 border-radius: 8px;
+                border-width: 1.5px;
             }
 
             .card-detail-item {
@@ -641,7 +650,7 @@
             .card-detail-item:nth-child(1),
             .card-detail-item:nth-child(2),
             .card-detail-item:nth-child(3) {
-                border-bottom: 1px solid #f1f3f5;
+                border-bottom: 1px solid #e5e7eb;
             }
 
             .card-detail-item:last-child {
@@ -708,7 +717,7 @@
                 print-color-adjust: exact;
             }
 
-            .purple-btn {
+            .purple-strip {
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
@@ -756,7 +765,7 @@
             <div class="title">Participation Card</div>
 
             <div class="subtitle">
-                <span class="purple-btn">
+                <span class="purple-strip">
                     <i class="fas fa-medal"></i> NATIONAL COMPETITION CARD
                 </span>
                 <span style="font-size:13px; color:#6b7280;">
