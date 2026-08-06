@@ -206,108 +206,126 @@
             box-shadow: 0 15px 40px rgba(0,0,0,0.12);
         }
 
-        .card-header {
-            padding: 25px 25px 20px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-            background: white;
-            align-items: center;
+        /* ===== PARTICIPANT SECTION WITH BORDER ===== */
+        .participant-section {
+            padding: 20px 25px 16px 25px;
+            border-bottom: 1px solid #f1f3f5;
         }
 
-        .card-header .avatar {
-            width: 110px;
-            height: 110px;
-            border-radius: 14px;
+        .participant-section .section-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: #6b7280;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .participant-content {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .participant-content .avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 12px;
             overflow: hidden;
             flex-shrink: 0;
-            border: 3px solid #e5e7eb;
+            border: 2px solid #e5e7eb;
             background: #f3f4f6;
         }
 
-        .card-header .avatar img {
+        .participant-content .avatar img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        .card-header .info {
+        .participant-content .info {
             flex: 1;
-            min-width: 200px;
+            min-width: 180px;
         }
 
-        .name {
-            font-size: 28px;
+        .participant-content .name {
+            font-size: 24px;
             font-weight: 700;
             color: #111827;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             letter-spacing: -0.3px;
         }
 
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 10px;
+        .participant-content .details-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 6px 0;
         }
 
-        .tag {
-            display: inline-block;
-            background: #f3f4f6;
-            padding: 5px 14px;
-            border-radius: 20px;
-            font-size: 13px;
+        .participant-content .details-list li {
+            font-size: 14px;
             color: #374151;
+            padding: 2px 0;
             font-weight: 500;
         }
 
-        .approved {
+        .participant-content .details-list li::before {
+            content: "• ";
+            color: #6b7280;
+        }
+
+        .participant-content .approved-badge {
             display: inline-flex;
             align-items: center;
             gap: 6px;
             background: #dcfce7;
             color: #15803d;
-            padding: 6px 16px;
+            padding: 4px 14px;
             border-radius: 20px;
             font-size: 13px;
             font-weight: 600;
+            margin-top: 2px;
         }
 
-        /* ===== CARD ROWS ===== */
-        .row {
-            display: flex;
+        /* ===== INFO BOXES WITH BORDERS ===== */
+        .info-box {
             padding: 14px 25px;
-            border-top: 1px solid #f1f3f5;
-            gap: 10px;
+            border-bottom: 1px solid #f1f3f5;
+            display: flex;
             flex-wrap: wrap;
+            gap: 4px;
         }
 
-        .row .label {
+        .info-box .label {
             color: #6b7280;
             font-weight: 600;
             font-size: 13px;
-            min-width: 130px;
+            min-width: 140px;
             text-transform: uppercase;
             letter-spacing: 0.3px;
         }
 
-        .row .value {
+        .info-box .value {
             flex: 1;
             color: #111827;
             font-size: 14px;
             font-weight: 500;
         }
 
-        .row .value .purple-btn {
-            margin: 0;
-            padding: 4px 16px;
+        .info-box .value .national-tag {
+            display: inline-block;
+            background: #f1e8ff;
+            color: #6d28d9;
+            padding: 2px 16px;
+            border-radius: 30px;
             font-size: 12px;
+            font-weight: 600;
         }
 
         /* ===== CARD DETAILS SECTION ===== */
         .card-details-section {
             padding: 20px 25px;
-            border-top: 1px solid #f1f3f5;
         }
 
         .card-details-section .section-title {
@@ -316,7 +334,7 @@
             color: #6b7280;
             letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }
 
         .card-details-grid {
@@ -382,7 +400,7 @@
             line-height: 1.6;
         }
 
-        /* ===== RESPONSIVE - Tablet ===== */
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             .fixed-header {
                 padding: 8px 12px 6px 12px;
@@ -415,52 +433,48 @@
                 font-size: 28px;
             }
 
-            .card-header {
-                padding: 18px 20px;
+            .participant-section {
+                padding: 16px 18px;
             }
 
-            .card-header .avatar {
-                width: 80px;
-                height: 80px;
+            .participant-content .avatar {
+                width: 70px;
+                height: 70px;
             }
 
-            .name {
-                font-size: 22px;
+            .participant-content .name {
+                font-size: 20px;
             }
 
-            .row {
-                padding: 12px 20px;
+            .info-box {
+                padding: 12px 18px;
                 flex-direction: column;
                 gap: 2px;
             }
 
-            .row .label {
+            .info-box .label {
                 min-width: auto;
                 font-size: 11px;
             }
 
-            .row .value {
+            .info-box .value {
                 font-size: 13px;
             }
 
             .card-details-section {
-                padding: 16px 20px;
-            }
-
-            .card-details-grid {
-                grid-template-columns: 1fr 1fr;
+                padding: 16px 18px;
             }
 
             .card-detail-item {
-                padding: 12px 16px;
+                padding: 10px 14px;
             }
 
             .card-detail-item h3 {
-                font-size: 14px;
+                font-size: 13px;
             }
 
             .card-footer {
-                padding: 12px 20px;
+                padding: 12px 18px;
             }
 
             .card-footer p {
@@ -468,7 +482,6 @@
             }
         }
 
-        /* ===== RESPONSIVE - Mobile (image on LEFT, name on RIGHT) ===== */
         @media (max-width: 480px) {
             .fixed-header {
                 padding: 6px 8px 4px 8px;
@@ -540,83 +553,63 @@
                 font-size: 12px;
             }
 
-            /* ===== FIX: Image on LEFT, Name on RIGHT on mobile ===== */
-            .card-header {
-                padding: 14px 16px;
-                display: flex;
+            .participant-section {
+                padding: 14px 14px;
+            }
+
+            .participant-content {
                 flex-direction: row;
-                align-items: center;
-                gap: 14px;
-                text-align: left;
+                gap: 12px;
             }
 
-            .card-header .avatar {
-                width: 70px;
-                height: 70px;
-                flex-shrink: 0;
+            .participant-content .avatar {
+                width: 60px;
+                height: 60px;
             }
 
-            .card-header .info {
-                min-width: auto;
-                width: auto;
-                flex: 1;
+            .participant-content .name {
+                font-size: 17px;
             }
 
-            .name {
-                font-size: 18px;
-                text-align: left;
+            .participant-content .details-list li {
+                font-size: 12px;
             }
 
-            .tags {
-                justify-content: flex-start;
-            }
-
-            .tag {
-                font-size: 10px;
+            .participant-content .approved-badge {
+                font-size: 11px;
                 padding: 3px 10px;
             }
 
-            .approved {
-                font-size: 10px;
-                padding: 4px 10px;
-            }
-
-            .row {
-                padding: 10px 16px;
+            .info-box {
+                padding: 10px 14px;
                 flex-direction: column;
                 gap: 2px;
             }
 
-            .row .label {
+            .info-box .label {
                 font-size: 10px;
                 min-width: auto;
             }
 
-            .row .value {
+            .info-box .value {
                 font-size: 12px;
             }
 
-            .row .value .purple-btn {
-                font-size: 10px;
-                padding: 3px 12px;
-            }
-
             .card-details-section {
-                padding: 14px 16px;
+                padding: 14px 14px;
             }
 
             .card-details-section .section-title {
                 font-size: 11px;
-                margin-bottom: 12px;
+                margin-bottom: 10px;
             }
 
             .card-details-grid {
-                grid-template-columns: 1fr 1fr;
                 border-radius: 8px;
             }
 
             .card-detail-item {
-                padding: 10px 14px;
+                padding: 10px 12px;
             }
 
             .card-detail-item small {
@@ -628,7 +621,7 @@
             }
 
             .card-footer {
-                padding: 10px 16px;
+                padding: 10px 14px;
             }
 
             .card-footer p {
@@ -665,13 +658,13 @@
                 align-items: flex-start;
             }
 
-            .card-header .avatar {
-                width: 60px;
-                height: 60px;
+            .participant-content .avatar {
+                width: 50px;
+                height: 50px;
             }
 
-            .name {
-                font-size: 16px;
+            .participant-content .name {
+                font-size: 15px;
             }
         }
 
@@ -710,7 +703,7 @@
                 print-color-adjust: exact;
             }
 
-            .approved {
+            .approved-badge {
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
@@ -721,6 +714,11 @@
             }
 
             .verify-box .icon {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .national-tag {
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
@@ -778,45 +776,46 @@
             <!-- ===== MAIN CARD ===== -->
             <div class="card">
 
-                <!-- Card Header - Image on LEFT, Name on RIGHT -->
-                <div class="card-header">
-                    <div class="avatar">
-                        <img src="20260503_1716411.png" alt="DUSE TREVOR">
-                    </div>
-                    <div class="info">
-                        <div class="name">DUSE TREVOR</div>
-                        <div class="tags">
-                            <span class="tag">Male</span>
-                            <span class="tag">UAHEB/061/034/24</span>
+                <!-- ===== PARTICIPANT SECTION ===== -->
+                <div class="participant-section">
+                    <div class="section-label">PARTICIPANT</div>
+                    <div class="participant-content">
+                        <div class="avatar">
+                            <img src="20260503_1716411.png" alt="WENGHONO JUSTUS KABASA">
                         </div>
-                        <span class="approved">
-                            <i class="fas fa-check-circle"></i> National Approved
-                        </span>
+                        <div class="info">
+                            <div class="name">WENGHONO JUSTUS KABASA</div>
+                            <ul class="details-list">
+                                <li>Male</li>
+                                <li>UAHEB/061/034/24</li>
+                            </ul>
+                            <span class="approved-badge">
+                                <i class="fas fa-check-circle"></i> National Approved
+                            </span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Card Rows -->
-                <div class="row">
-                    <span class="label">Institution</span>
+                <!-- ===== INFO BOXES ===== -->
+                <div class="info-box">
+                    <span class="label">INSTITUTION</span>
                     <span class="value">Medical Laboratory Training School Jinja</span>
                 </div>
 
-                <div class="row">
-                    <span class="label">Disciplines</span>
-                    <span class="value">Handball – Men, Volleyball – Men</span>
+                <div class="info-box">
+                    <span class="label">DISCIPLINES</span>
+                    <span class="value">Football – Men, Volleyball – Men</span>
                 </div>
 
-                <div class="row">
-                    <span class="label">Tournament</span>
+                <div class="info-box">
+                    <span class="label">TOURNAMENT</span>
                     <span class="value">THE 24th Edn of the national games and sports for health training institutions 2026</span>
                 </div>
 
-                <div class="row">
-                    <span class="label">Competition Level</span>
+                <div class="info-box">
+                    <span class="label">COMPETITION LEVEL</span>
                     <span class="value">
-                        <span class="purple-btn" style="margin:0; padding:4px 16px; font-size:12px;">
-                            <i class="fas fa-star"></i> National
-                        </span>
+                        <span class="national-tag">National</span>
                     </span>
                 </div>
 
@@ -844,7 +843,7 @@
                     </div>
                 </div>
 
-                <!-- Card Footer -->
+                <!-- ===== FOOTER ===== -->
                 <div class="card-footer">
                     <p>This verification is confidential. Each scan is recorded for security. Unauthorised reproduction is prohibited.</p>
                 </div>
